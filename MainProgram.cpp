@@ -154,9 +154,9 @@ MyString MyString::trim() const {
     // TODO: Return a NEW MyString with leading and trailing whitespace removed
     // Whitespace includes: space, tab (\t), newline (\n), carriage return (\r)
     // Hint: Use find_first_not_of and find_last_not_of
-    size_t start = data.find_first_not_of("\t\n\r");
+    size_t start = data.find_first_not_of(" \t\n\r ");
     if (start == string::npos) return MyString("");
-    size_t end = data.find_last_not_of("\t\n\r");
+    size_t end = data.find_last_not_of(" \t\n\r ");
     return MyString(data.substr(start, end-start+1));
     
 }
@@ -166,7 +166,7 @@ MyString MyString::reverse() const {
     // Hint: Use std::reverse on a copy
     string result = data;
     //return reverse(result[0],result[yeni.length()-1]);
-    reverse(result.begin(), result.end());
+    std::reverse(result.begin(), result.end());
     return MyString(result);
 }
 
