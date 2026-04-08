@@ -166,7 +166,7 @@ MyString MyString::reverse() const {
     // Hint: Use std::reverse on a copy
     string result = data;
     //return reverse(result[0],result[yeni.length()-1]);
-    std::reverse(result.begin(), result.end());
+    reverse(result.begin(), result.end());
     return MyString(result);
 }
 
